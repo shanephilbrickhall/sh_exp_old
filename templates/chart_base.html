@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+            google.charts.load('current', {'packages':['line', 'corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'period');
+              data.addColumn('number', '{{ seriesName| safe }}');
+
+              data.addRows({{ closePrices| safe}});
+
+              var options = {
+                chart: {
+                  title: '{{ chartName| safe }}'
+                },
+                width: 1200,
+                height: 575
+              };
+
+              var chart = new google.charts.Line(document.getElementById('chart_div'));
+
+              chart.draw(data, google.charts.Line.convertOptions(options));
+            }
+
+       </script>
+
+</head>
+<body>
+<div align="center">
+       <a href='/'> <img src="/static/BPE_Logo_FullColor_4in_Primary_RGB-03.jpg" alt="Logo" style="width:450px;height:200px;"> </a>
+</div>
+<div id="chart_div" style="border: 1px solid #ccc" align="center"></div>
+{{ closePrices| safe}}
+</body>
+</html>
