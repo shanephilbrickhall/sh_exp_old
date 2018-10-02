@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DTN API SITE DIRECTORY PAGE</title>
+</head>
+<body >
+    <div align="center"><img src="/static/BPE_Logo_FullColor_4in_Primary_RGB-03.jpg" alt="Logo" style="width:450px;height:200px;" border="1px"></div>
+    <div align="center"><b>This is the DTN_API Site Directory</b></div>
+    <br>
+    <div>
+        <a href='/admin_login'><div align="center"> <b>Admin Login </b></div></a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href='/logout'><div align="center"> <b>Logout </b></div></a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href="/NatGas/Prompt_Month/2yr_History"><div align="center"><b>NYMEX Natural Gas
+            Prompt Futures 2 years history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href="/Nat_Gas_3Mo_Strip/Monthly/5yr_History"><div align="center"><b>NYMEX Natural Gas 3 Mo Strip
+            Average Monthly 5 year history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href="/Nat_Gas_6Mo_Strip/Monthly/5yr_History"><div align="center"><b>NYMEX Natural Gas 6 Mo Strip
+            Average Monthly 5 year history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href="/Nat_Gas_12Mo_Strip/Monthly/5yr_History"><div align="center"><b>NYMEX Natural Gas 12 Mo Strip
+            Average Monthly 5 year history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href="/Nat_Gas_24Mo_Strip/Monthly/5yr_History"><div align="center"><b>NYMEX Natural Gas 24 Mo Strip
+            Average Monthly 5 year history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href="/Nat_Gas_36Mo_Strip/Monthly/5yr_History"><div align="center"><b>NYMEX Natural Gas 36 Mo Strip
+            Average Monthly 5 year history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div>
+        <a href='/ISONE_Mass_Hub_5MW_OnPeak/Prompt_Month/2yr_History'><div align="center"><b>ISO NE 5 MW On Peak Prompt Futures 2 years history</b></div> </a>
+    </div>
+    <br/>
+    <br/>
+    <div>
+        <a href='/NYISO_Zone_J/Prompt_Month/2yr_History'><div align="center"><b>NYISO Zone J Prompt Futures 2 years history</b></div> </a>
+    </div>
+    <br/>
+    <br/>
+    <div>
+        <a href='/PJM_Western_Peak_LMP/Prompt_Month/2yr_History'><div align="center"><b>PJM Western Hub LMP Futures 2 years history</b></div> </a>
+    </div>
+    <br/>
+    <br>
+    <div align="center">
+        <b>Custom 2 year history search</b>
+    </div>
+    <br/>
+    <div align="center">
+        Symbol Root
+        <input type="text" id="symField" value=""/>
+        Symbol Month
+        <input type="text" id="monField" value=""/>
+        Symbol Year
+        <input type="text" id="yrField" value=""/>
+        <a href='' onclick="this.href='Contract_Root/'+document.getElementById('symField').value+'/'+
+        document.getElementById('monField').value+'/'+
+        document.getElementById('yrField').value"><b>Submit</b></a>
+    </div>
+<br>
+    <div align="center">
+        <b>Custom Futures Strip Search</b>
+    </div>
+    <br/>
+    <div align="center">
+        Symbol Root
+        <input type="text" id="symRoot" value=""/>
+        Strip Length
+        <input type="text" id="strLen" value=""/>
+        Start Date
+        <input type="text" id="sDt" value=""/>
+        <a href='' onclick="this.href='Custom_Strip/Symbol_Root/'+document.getElementById('symRoot').value+'/Strip_Length/'+
+        document.getElementById('strLen').value+'/Start_Date/'+
+        document.getElementById('sDt').value"><b>Submit</b></a>
+    </div>
+    <br>
+    <div align="center">
+        <b>Market Forecast and Simulation</b>
+    </div>
+    <br/>
+    <div align="center">
+        Complete Symbol
+        <input type="text" id="symbol" value=""/>
+        Years of History
+        <input type="text" id="years_Hist" value=""/>
+        Number of Simulation Days
+        <input type="text" id="sim_days" value=""/>
+        Number of Simulation Runs
+        <input type="text" id="num_sims" value=""/>
+        Window of Certainty
+        <input type="text" id="window" value=""/>
+        <a href='' onclick="this.href='BPE_Market_Forecast/Complete_Symbol='+document.getElementById('symbol').value+'/Num_Years_History='+
+        document.getElementById('years_Hist').value+'/Num_Sim_Days='+
+        document.getElementById('sim_days').value+'/Num_Sim_Runs='+
+        document.getElementById('num_sims').value+'/Window_of_Certainty='+
+        document.getElementById('window').value"><b>Submit</b></a>
+    </div>
+</body>
+</html>
